@@ -1,6 +1,6 @@
 package com.company.main;
 
-public class Blowfish extends Fish{
+public class Blowfish extends Fish implements AnimalBehaviour, AnimalMove, AnimalName{
 
     private String ScaleColor_Nuri_56870;
     private int Diameter_Nuri_56870;
@@ -21,8 +21,6 @@ public class Blowfish extends Fish{
         super(Weight_Nuri_56870, ScaleColor_Nuri_56870);
         this.Diameter_Nuri_56870 = Diameter_Nuri_56870;
     }
-
-
 
     public void drinkMilk()
     {
@@ -54,11 +52,35 @@ public class Blowfish extends Fish{
         this.Diameter_Nuri_56870 = Diameter_Nuri_56870;
     }
 
+    @Override
+    public void getVoice() {
+        System.out.println("Blowfish is making sounds");
+    }
+
     public String toString()
     {
         return "Blowfish{" +
                 "ScaleColor ='" + ScaleColor_Nuri_56870 + '\'' +
                 '}';
 
+    }
+
+
+    // task 8
+    @Override
+    public void Sleep_Nuri_56870()
+    {
+        System.out.println("zzz");
+    }
+
+    @Override
+    public void Move_Nuri_56870() throws RuntimeException {
+        System.out.println("Blowfish swim");
+    }
+
+    public String getName_Nuri_56870()
+    {
+        System.out.println("The name of Blowfish is: " + Name_Nuri_56870);
+        return null;
     }
 }

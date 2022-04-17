@@ -1,6 +1,6 @@
 package com.company.main;
 
-public class Pigeon extends Bird{
+public class Pigeon extends Bird implements AnimalBehaviour, AnimalMove, AnimalName{
 
     private String FeatherColor_Nuri_56870;
     private String Species_Nuri_56870;
@@ -51,11 +51,35 @@ public class Pigeon extends Bird{
         this.Species_Nuri_56870 = FeatherColor_Nuri_56870;
     }
 
+    @Override
+    public void getVoice() {
+        System.out.println("Pigeon is making sounds as cooing cooing");
+    }
+
+
     public String toString()
     {
         return "Pigeon{" +
                 "FeatherColor ='" + FeatherColor_Nuri_56870 + '\'' +
                 '}';
 
+    }
+
+    //task 8
+    @Override
+    public void Sleep_Nuri_56870()
+    {
+        System.out.println("zzz");
+    }
+
+    @Override
+    public void Move_Nuri_56870() throws RuntimeException {
+        System.out.println("Pigeon fly");
+    }
+
+    public String getName_Nuri_56870()
+    {
+        System.out.println("The name of Pigeon is: " + Name_Nuri_56870);
+        return null;
     }
 }
