@@ -7,6 +7,7 @@ public interface AnimalMove {
         System.out.println(AnimalName);
         String AnimalMove = "";
         System.out.println(AnimalMove);
+        // whateva
     }
 }
 
